@@ -1,13 +1,18 @@
 import styled from "@emotion/styled";
 
-export const PrimaryButton = styled.button`
+const primary700 = "#1f7081";
+
+const Button = styled.button`
   padding: 1rem 4rem;
   border: none;
   border-radius: 0.5rem;
 
-  color: white;
   font-size: 1.5rem;
   font-weight: 700;
+`;
 
-  background: #1f7081;
+export const PrimaryButton = styled(Button)`
+  color: white;
+
+  background: ${primary700};
 `;
