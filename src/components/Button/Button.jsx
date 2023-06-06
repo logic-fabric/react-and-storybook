@@ -1,10 +1,6 @@
 import styled from "@emotion/styled";
 
-const primary500 = "#278ca2";
-const primary700 = "#1f7081";
-
-const tonic500 = "#fd9222";
-const tonic700 = "#ab5801";
+import { defaultTheme as theme } from "../../theme";
 
 const Button = styled.button`
   width: fit-content;
@@ -12,7 +8,7 @@ const Button = styled.button`
   border: none;
   border-radius: 0.5rem;
 
-  font-size: 1.5rem;
+  font-size: ${theme.typography.size.h5};
   font-weight: 700;
 
   cursor: pointer;
@@ -21,11 +17,19 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   color: white;
 
-  background: linear-gradient(60deg, ${primary700}, ${primary500});
+  background: linear-gradient(
+    60deg,
+    ${theme.colors.primaryDark},
+    ${theme.colors.primary}
+  );
 `;
 
 export const TonicButton = styled(Button)`
   color: white;
 
-  background: linear-gradient(60deg, ${tonic700}, ${tonic500});
+  background: linear-gradient(
+    60deg,
+    ${theme.colors.tonicDark},
+    ${theme.colors.tonic}
+  );
 `;
